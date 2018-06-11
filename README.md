@@ -1,0 +1,1 @@
+### Setup install script for using Fedora and Chrome for info screens
