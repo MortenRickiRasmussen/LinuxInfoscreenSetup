@@ -11,7 +11,7 @@ wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-ke
 echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
 
 apt-get update && apt-get install \
-  openssh-server -y
+  openssh-server -y \
   google-chrome-stable
 
 # Enabled the OpenSSH Server in startup
@@ -42,7 +42,7 @@ touch /home/$1/.config/autostart/resfix.desktop
 printf "[Desktop Entry]\nName=Resolution Fix\nExec=/home/$1/chrome.sh\nTerminal=true\nType=Application" > /home/$1/.config/autostart/resfix.desktop
 
 # Disables the Gnome Keyring
-mv /usr/bin/gnome-keyring-daemon /usr/bin/gnome-keyring-daemon.bak
+#mv /usr/bin/gnome-keyring-daemon /usr/bin/gnome-keyring-daemon.bak
 
 # Setup Crontab
 # printf "#!/bin/bash\nsudo reboot" > /home/$1/crontab.sh
