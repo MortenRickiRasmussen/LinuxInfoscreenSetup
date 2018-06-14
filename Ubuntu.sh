@@ -15,7 +15,7 @@ apt-get update && apt-get install \
   google-chrome-stable
 
 # Enabled the OpenSSH Server in startup
-systemctl enable sshd
+systemctl enable ssh.service
 
 # Starts the SSH Server
 systemctl start sshd
